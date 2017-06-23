@@ -11,7 +11,14 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Margin="10" VerticalOptions="Center" Text="{Binding desc}" FontSize="Medium" TextColor="Black" ></Label>
+                        <StackLayout Orientation="Vertical" Padding="3">
+                            <Label VerticalOptions="Center" Text="{Binding desc}" FontSize="Medium" TextColor="Black" ></Label>
+                            <StackLayout Orientation="Horizontal" Padding="3">
+                                <Label VerticalOptions="Center" Text="{Binding Ano}" FontSize="Medium" TextColor="Blue"></Label>
+                                <Label VerticalOptions="Center" Text="{Binding Gravadora}" FontSize="Medium" TextColor="Green"></Label>
+                            </StackLayout>
+
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

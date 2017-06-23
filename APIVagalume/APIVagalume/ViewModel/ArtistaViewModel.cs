@@ -26,6 +26,8 @@ namespace APIVagalume.ViewModel
             }
         }
 
+        private string _Ano;
+        
         private string _TextoBusca;
         public string TextoBusca
         {
@@ -79,7 +81,7 @@ namespace APIVagalume.ViewModel
                 artist Artista = await WebAPI.GetLista(_TextoBusca);
                 if (Artista != null)
                 {
-                    ImagemArtista = "https://s2.vagalume.com/" + Artista.pic_medium;
+                    ImagemArtista = "https://s2.vagalume.com/" + Artista.pic_medium;                    
                     foreach (Item3 Album in Artista.albums.item)
                     {
                         _ListaAlbuns.Add(Album);

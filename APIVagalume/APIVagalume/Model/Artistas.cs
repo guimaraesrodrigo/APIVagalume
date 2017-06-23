@@ -55,6 +55,18 @@ namespace APIVagalume.Model
         public string url { get; set; }
         public string year { get; set; }
         public string label { get; set; }
+
+        public string Ano
+        {
+            get { return "Ano: " + year; }
+        }
+
+        public string Gravadora
+        {
+            get { return "Gravadora: " + label; }
+        }
+
+
     }
 
     public class Albums
