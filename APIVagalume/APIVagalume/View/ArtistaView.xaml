@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APIVagalume.View.ArtistaView">
+
+    <StackLayout Orientation="Vertical">
+        <SearchBar x:Name="SearchArtista" Text="{Binding TextoBusca}"/>
+        <Image Source="{Binding ImagemArtista}" Aspect="AspectFit" />
+        <Label Margin="8" IsVisible="{Binding ListaAlbumCountMaiorQueZero}" Text="Albuns" TextColor="Blue" FontAttributes="Bold" FontSize="Large"/>
+        <ListView ItemsSource="{Binding ListaAlbuns}" SeparatorColor="Blue" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Margin="10" VerticalOptions="Center" Text="{Binding desc}" FontSize="Medium" TextColor="Black" ></Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
